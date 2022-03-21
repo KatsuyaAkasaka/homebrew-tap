@@ -5,20 +5,20 @@
 class NoteCli < Formula
   desc "note-cli"
   homepage "https://github.com/KatsuyaAkasaka"
-  version "0.0.4"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.0.4/note-cli_0.0.4_Darwin_arm64.tar.gz"
-      sha256 "fd98a0377326bcd0dd9f8a228bd8e9186565bb16287c44fb145ffbd923e10e87"
+      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.1.0/note-cli_0.1.0_Darwin_arm64.tar.gz"
+      sha256 "642e7ba3cee4bff14c136d0a8695a8d206a8e505daeb9541188d44c839da07fe"
 
       def install
         bin.install "note-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.0.4/note-cli_0.0.4_Darwin_x86_64.tar.gz"
-      sha256 "dcd5184a484d3ff7aef5b88d0085be4a0cd393f4dd46743f065e2f3289261000"
+      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.1.0/note-cli_0.1.0_Darwin_x86_64.tar.gz"
+      sha256 "63ee02259c466f3f4fbdda70011273383f93732847da5fc442ac917de55c7e95"
 
       def install
         bin.install "note-cli"
@@ -27,17 +27,17 @@ class NoteCli < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.0.4/note-cli_0.0.4_Linux_x86_64.tar.gz"
-      sha256 "1e5b51df573a4bb46cd6d90068272633bed9d55f05d8bb853d13dd8e3302cc37"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.1.0/note-cli_0.1.0_Linux_arm64.tar.gz"
+      sha256 "0c25ebcb25236b6485939f29a7be351dee53aec372451f66f1027359b8a90ff0"
 
       def install
         bin.install "note-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.0.4/note-cli_0.0.4_Linux_arm64.tar.gz"
-      sha256 "9e5b30f922856630ae1c666af180755e229a0933f6d0546af5aeb1e1d4564661"
+    if Hardware::CPU.intel?
+      url "https://github.com/KatsuyaAkasaka/note-cli/releases/download/v0.1.0/note-cli_0.1.0_Linux_x86_64.tar.gz"
+      sha256 "214fc3bf7a7f0987b3eadbbb4dd67de2c408ced711a5ccd196b8f2b6f423bf38"
 
       def install
         bin.install "note-cli"
