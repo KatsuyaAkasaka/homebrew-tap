@@ -5,20 +5,20 @@
 class Kanban < Formula
   desc ""
   homepage ""
-  version "0.0.14"
+  version "0.0.15"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.14/kanban_Darwin_x86_64.tar.gz"
-      sha256 "fad6c5860b6964f3b190a98c76d94ff60ec06c8577cab63f88663e5c5fef6be5"
+      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.15/kanban_Darwin_x86_64.tar.gz"
+      sha256 "139c853694d2ee8af0df346fb68bebcaaedc12a7d225c61858af8a42d08c2488"
 
       def install
         bin.install "kanban"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.14/kanban_Darwin_arm64.tar.gz"
-      sha256 "bf432ba5497c26e4b26cd945911fd081b4423d1d24951ead3d41a08553c9957f"
+      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.15/kanban_Darwin_arm64.tar.gz"
+      sha256 "594bf4a57422ed223ed35291e90431aa937f8c835b08507fb53e74cc161d1845"
 
       def install
         bin.install "kanban"
@@ -29,8 +29,8 @@ class Kanban < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.14/kanban_Linux_x86_64.tar.gz"
-        sha256 "37f765f33c0bef5f15675f52d503749cf9733b8da29e1074044cc76dc025ddb2"
+        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.15/kanban_Linux_x86_64.tar.gz"
+        sha256 "53d71a60b6c48318f9c09d83f4e84163b15a0800ceb2f9c61f682fdf0a4fcdc4"
 
         def install
           bin.install "kanban"
@@ -39,8 +39,8 @@ class Kanban < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.14/kanban_Linux_arm64.tar.gz"
-        sha256 "3b391fdf417057c8bba8e1aa1358cef62a0f550c53ab9e3de9e780cf061b10e2"
+        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.15/kanban_Linux_arm64.tar.gz"
+        sha256 "b60b66d3518efa85f381a33f7c16b7670323b3407239ea53e4ec8d3f6a898c21"
 
         def install
           bin.install "kanban"
