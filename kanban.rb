@@ -6,20 +6,20 @@ require_relative "lib/private_strategy"
 class Kanban < Formula
   desc ""
   homepage ""
-  version "0.0.20"
+  version "0.0.21"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.20/kanban_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "54d88863b8fc14454b06151f0b30cebba034536b66b4e334263dd05f73b6d197"
+      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.21/kanban_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4d41d999c1fe2ca4725edd78501cc212738a808bf859f34d407f0e5e1ee55ba6"
 
       def install
         bin.install "kanban"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.20/kanban_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "e60b424e35c00971ac01a12a70ba2a6b07c1d6fefd5baebbfe3cd1836348d8f8"
+      url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.21/kanban_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "4689e7c423cd44be44664c57f947f95a4048df205a07e8f1b6a042b82eb4a449"
 
       def install
         bin.install "kanban"
@@ -30,8 +30,8 @@ class Kanban < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.20/kanban_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "b580a86a205786b08c5e6474b5803f038994f4c3e1b7809959f1964ad86bae00"
+        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.21/kanban_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "2d766e1d3329514fd02952bcc6e0a853473fe78e8d6c1f333a3bfb220a5b1df6"
 
         def install
           bin.install "kanban"
@@ -40,8 +40,8 @@ class Kanban < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.20/kanban_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "7e338730aeaaf168aa9fca9407eb430e713b7aa79609ba049361a3bf1d08720e"
+        url "https://github.com/KatsuyaAkasaka/kanban/releases/download/v0.0.21/kanban_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+        sha256 "110d727692d88f2bd5326c6d8939daa0ce6ffa33b83f0ce11a0481e8865852c7"
 
         def install
           bin.install "kanban"
